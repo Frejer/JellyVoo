@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jellyfin.Plugin.JellyVoo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0.0+88b8efb981b73e3ba630497271843d780f800760")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0.0+94484a0feab47ab5bdb662ffba4a7746906c3b70")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jellyfin.Plugin.JellyVoo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jellyfin.Plugin.JellyVoo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
