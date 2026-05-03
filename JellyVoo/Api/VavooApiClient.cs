@@ -39,6 +39,12 @@ public class VavooApiClient
 
     private static readonly TimeSpan SignatureCacheDuration = TimeSpan.FromMinutes(30);
 
+    // Number of hex characters used for the device unique ID in lokke.app ping requests
+    private const int DeviceUniqueIdLength = 16;
+
+    // Milliseconds in one day, used to set a realistic firstAppStart timestamp
+    private const long MillisecondsPerDay = 86_400_000L;
+
     /// <summary>
     /// Initializes a new instance of the <see cref="VavooApiClient"/> class.
     /// </summary>
@@ -123,7 +129,7 @@ public class VavooApiClient
         try
         {
             var nowMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            var uniqueId = Guid.NewGuid().ToString("N")[..16];
+            var uniqueId = Guid.NewGuid().ToString("N")[..DeviceUniqueIdLength];
 
             var pingBody = new LokkePingRequest
             {
@@ -131,7 +137,7 @@ public class VavooApiClient
                 Reason = "app-blur",
                 Locale = "en",
                 Theme = "dark",
-                FirstAppStart = nowMs - 86_400_000,
+                FirstAppStart = nowMs - MillisecondsPerDay,
                 LastAppStart = nowMs,
                 Metadata = new System.Collections.Generic.Dictionary<string, object>
                 {

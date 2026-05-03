@@ -1,0 +1,12 @@
+## Build output
+bin/
+obj/
+
+## IDE files
+.vs/
+*.user
+.idea/
+*.suo
+
+## NuGet
+*.nupkg

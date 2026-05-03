@@ -54,11 +54,7 @@ public class VavooLiveTvService : ILiveTvService
 
         if (!string.IsNullOrWhiteSpace(countryFilter))
         {
-            var countries = countryFilter
-                .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-
-            filtered = vavooChannels.Where(ch =>
-                countries.Any(c => string.Equals(ch.Country, c, StringComparison.OrdinalIgnoreCase)));
+            filtered = vavooChannels.Where(ch => MatchesCountryFilter(ch.Country, countryFilter));
         }
 
         var results = new List<ChannelInfo>();
@@ -144,37 +140,43 @@ public class VavooLiveTvService : ILiveTvService
     /// <inheritdoc />
     public Task CancelTimerAsync(string timerId, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException("JellyVoo does not support recordings.");
+        throw new NotSupportedException("Vavoo.to is a live streaming service and does not support recordings.");
     }
 
     /// <inheritdoc />
     public Task CancelSeriesTimerAsync(string timerId, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException("JellyVoo does not support recordings.");
+        throw new NotSupportedException("Vavoo.to is a live streaming service and does not support recordings.");
     }
 
     /// <inheritdoc />
     public Task CreateTimerAsync(TimerInfo info, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException("JellyVoo does not support recordings.");
+        throw new NotSupportedException("Vavoo.to is a live streaming service and does not support recordings.");
     }
 
     /// <inheritdoc />
     public Task CreateSeriesTimerAsync(SeriesTimerInfo info, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException("JellyVoo does not support recordings.");
+        throw new NotSupportedException("Vavoo.to is a live streaming service and does not support recordings.");
     }
 
     /// <inheritdoc />
     public Task UpdateTimerAsync(TimerInfo updatedTimer, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException("JellyVoo does not support recordings.");
+        throw new NotSupportedException("Vavoo.to is a live streaming service and does not support recordings.");
     }
 
     /// <inheritdoc />
     public Task UpdateSeriesTimerAsync(SeriesTimerInfo info, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException("JellyVoo does not support recordings.");
+        throw new NotSupportedException("Vavoo.to is a live streaming service and does not support recordings.");
+    }
+
+    private static bool MatchesCountryFilter(string channelCountry, string countryFilter)
+    {
+        var countries = countryFilter.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        return countries.Any(c => string.Equals(channelCountry, c, StringComparison.OrdinalIgnoreCase));
     }
 
     private async Task<MediaSourceInfo> BuildMediaSourceAsync(string channelId, CancellationToken cancellationToken)
