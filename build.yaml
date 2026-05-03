@@ -1,0 +1,5 @@
+---
+version: 1
+dotnetVersion: "net8.0"
+configurations:
+  - Release
