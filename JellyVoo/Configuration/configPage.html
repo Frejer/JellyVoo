@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JellyVoo</title>
+</head>
+<body>
+    <div id="JellyVooConfigPage" data-role="page" class="page type-interior pluginConfigurationPage" data-require="emby-input,emby-button,emby-select,emby-checkbox">
+        <div data-role="content">
+            <div class="content-primary">
+                <form id="JellyVooConfigForm">
+                    <div class="sectionTitleContainer flex align-items-center">
+                        <h2 class="sectionTitle">JellyVoo – Live TV via Vavoo.to</h2>
+                    </div>
+
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="countryFilter">Country Filter</label>
+                        <input id="countryFilter" name="CountryFilter" type="text" is="emby-input"
+                               placeholder="e.g. Poland, Turkey (leave empty for all countries)" />
+                        <div class="fieldDescription">
+                            Filter channels by country name. Separate multiple countries with a comma.
+                            Leave empty to show channels from all countries.
+                        </div>
+                    </div>
+
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="channelCacheMinutes">Channel Cache (minutes)</label>
+                        <input id="channelCacheMinutes" name="ChannelCacheMinutes" type="number" is="emby-input"
+                               min="1" max="1440" placeholder="15" />
+                        <div class="fieldDescription">
+                            How long the channel list is cached before being refreshed from Vavoo.to.
+                        </div>
+                    </div>
+
+                    <div>
+                        <button is="emby-button" type="submit" class="raised button-submit block">
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var JellyVooConfig = {
+                pluginUniqueId: 'b3d4e5f6-a7b8-c9d0-e1f2-a3b4c5d6e7f8'
+            };
+
+            document.querySelector('#JellyVooConfigPage').addEventListener('pageshow', function () {
+                Dashboard.showLoadingMsg();
+                ApiClient.getPluginConfiguration(JellyVooConfig.pluginUniqueId).then(function (config) {
+                    document.querySelector('#countryFilter').value = config.CountryFilter || '';
+                    document.querySelector('#channelCacheMinutes').value = config.ChannelCacheMinutes || 15;
+                    Dashboard.hideLoadingMsg();
+                });
+            });
+
+            document.querySelector('#JellyVooConfigForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                Dashboard.showLoadingMsg();
+                ApiClient.getPluginConfiguration(JellyVooConfig.pluginUniqueId).then(function (config) {
+                    config.CountryFilter = document.querySelector('#countryFilter').value;
+                    config.ChannelCacheMinutes = parseInt(document.querySelector('#channelCacheMinutes').value, 10) || 15;
+                    ApiClient.updatePluginConfiguration(JellyVooConfig.pluginUniqueId, config).then(function () {
+                        Dashboard.processPluginConfigurationUpdateResult();
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

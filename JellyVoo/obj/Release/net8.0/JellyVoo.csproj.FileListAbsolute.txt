@@ -1,0 +1,15 @@
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/JellyVoo.csproj.AssemblyReference.cache
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/JellyVoo.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/JellyVoo.AssemblyInfoInputs.cache
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/JellyVoo.AssemblyInfo.cs
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/JellyVoo.csproj.CoreCompileInputs.cache
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/JellyVoo.sourcelink.json
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/bin/Release/net8.0/Jellyfin.Plugin.JellyVoo.deps.json
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/bin/Release/net8.0/Jellyfin.Plugin.JellyVoo.dll
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/bin/Release/net8.0/Jellyfin.Plugin.JellyVoo.pdb
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/bin/Release/net8.0/Jellyfin.Plugin.JellyVoo.xml
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/Jellyfin.Plugin.JellyVoo.dll
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/refint/Jellyfin.Plugin.JellyVoo.dll
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/Jellyfin.Plugin.JellyVoo.xml
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/Jellyfin.Plugin.JellyVoo.pdb
+/home/runner/work/JellyVoo/JellyVoo/JellyVoo/obj/Release/net8.0/ref/Jellyfin.Plugin.JellyVoo.dll

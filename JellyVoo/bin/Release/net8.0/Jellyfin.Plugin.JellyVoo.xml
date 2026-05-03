@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jellyfin.Plugin.JellyVoo</name>
+    </assembly>
+    <members>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.LokkeAppPingResponse">
+            <summary>
+            Response from the lokke.app ping endpoint used to obtain a Vavoo auth signature.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkeAppPingResponse.AddonSig">
+            <summary>
+            Gets or sets the addon signature used to authenticate Vavoo stream resolution requests.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.VavooBox2PingResponse">
+            <summary>
+            Response from the vavoo.tv box/ping2 endpoint (fallback auth).
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooBox2PingResponse.Response">
+            <summary>
+            Gets or sets the inner response object.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.VavooBox2PingInner">
+            <summary>
+            Inner response from vavoo.tv box/ping2.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooBox2PingInner.Signed">
+            <summary>
+            Gets or sets the signed token that can be appended to stream URLs as <c>vavoo_auth</c>.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveRequest">
+            <summary>
+            Request body sent to <c>vavoo.to/mediahubmx-resolve.json</c>.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveRequest.Language">
+            <summary>
+            Gets or sets the BCP-47 language code.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveRequest.Region">
+            <summary>
+            Gets or sets the ISO 3166-1 alpha-2 region code.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveRequest.Url">
+            <summary>
+            Gets or sets the Vavoo stream URL to resolve.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveRequest.ClientVersion">
+            <summary>
+            Gets or sets the client version string.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveItem">
+            <summary>
+            A single item in a mediahubmx-resolve response list.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooResolveItem.Url">
+            <summary>
+            Gets or sets the resolved stream URL.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest">
+            <summary>
+            Ping request body for lokke.app.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Token">
+            <summary>Gets or sets the app token.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Reason">
+            <summary>Gets or sets the trigger reason.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Locale">
+            <summary>Gets or sets the locale.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Theme">
+            <summary>Gets or sets the theme.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Metadata">
+            <summary>Gets or sets device/app metadata.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.AppFocusTime">
+            <summary>Gets or sets appFocusTime.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.PlayerActive">
+            <summary>Gets or sets playerActive.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.PlayDuration">
+            <summary>Gets or sets playDuration.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.DevMode">
+            <summary>Gets or sets devMode.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.HasAddon">
+            <summary>Gets or sets hasAddon.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.CastConnected">
+            <summary>Gets or sets castConnected.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Package">
+            <summary>Gets or sets the package name.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Version">
+            <summary>Gets or sets the version.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Process">
+            <summary>Gets or sets the process.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.FirstAppStart">
+            <summary>Gets or sets firstAppStart timestamp.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.LastAppStart">
+            <summary>Gets or sets lastAppStart timestamp.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.IpLocation">
+            <summary>Gets or sets ipLocation.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.AdblockEnabled">
+            <summary>Gets or sets adblockEnabled.</summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.LokkePingRequest.Iap">
+            <summary>Gets or sets iap.</summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel">
+            <summary>
+            Represents a channel entry returned by the Vavoo.to channels API.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel.Id">
+            <summary>
+            Gets or sets the unique channel identifier.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel.Name">
+            <summary>
+            Gets or sets the channel display name.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel.Country">
+            <summary>
+            Gets or sets the country the channel belongs to.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel.Logo">
+            <summary>
+            Gets or sets the optional channel logo URL.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel.Category">
+            <summary>
+            Gets or sets the optional channel category / group.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Api.VavooApiClient">
+            <summary>
+            HTTP client for the Vavoo.to API, handling channel listing, authentication, and stream URL resolution.
+            </summary>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.Api.VavooApiClient.#ctor(System.Net.Http.IHttpClientFactory,Microsoft.Extensions.Logging.ILogger{Jellyfin.Plugin.JellyVoo.Api.VavooApiClient})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Jellyfin.Plugin.JellyVoo.Api.VavooApiClient"/> class.
+            </summary>
+            <param name="httpClientFactory">The HTTP client factory.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.Api.VavooApiClient.GetChannelsAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Returns the list of available Vavoo channels, using a timed cache.
+            </summary>
+            <param name="cacheMinutes">Cache duration in minutes.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>A list of <see cref="T:Jellyfin.Plugin.JellyVoo.Api.Models.VavooChannel"/> objects.</returns>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.Api.VavooApiClient.ResolveStreamUrlAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Resolves the playback URL for a given channel, attempting authentication via lokke.app first,
+            then falling back to the ping2 token, and finally to the raw stream URL.
+            </summary>
+            <param name="channelId">The integer channel ID from the Vavoo channels list.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>A resolved stream URL string.</returns>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Configuration.PluginConfiguration">
+            <summary>
+            Plugin configuration for JellyVoo.
+            </summary>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.Configuration.PluginConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Jellyfin.Plugin.JellyVoo.Configuration.PluginConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Configuration.PluginConfiguration.CountryFilter">
+            <summary>
+            Gets or sets the country filter (e.g. "Poland", "Turkey"). Leave empty to include all countries.
+            </summary>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Configuration.PluginConfiguration.ChannelCacheMinutes">
+            <summary>
+            Gets or sets how long (in minutes) the channel list is cached before refreshing.
+            </summary>
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService">
+            <summary>
+            Implements <see cref="T:MediaBrowser.Controller.LiveTv.ILiveTvService"/> to provide Live TV channels from Vavoo.to.
+            </summary>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.#ctor(Jellyfin.Plugin.JellyVoo.Api.VavooApiClient,Microsoft.Extensions.Logging.ILogger{Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService"/> class.
+            </summary>
+            <param name="apiClient">The Vavoo API client.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.HomePageUrl">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetChannelsAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetChannelStreamMediaSources(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetChannelStream(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.CloseLiveStream(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.ResetTuner(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetProgramsAsync(System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetTimersAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetSeriesTimersAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.GetNewTimerDefaultsAsync(System.Threading.CancellationToken,MediaBrowser.Controller.LiveTv.ProgramInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.CancelTimerAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.CancelSeriesTimerAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.CreateTimerAsync(MediaBrowser.Controller.LiveTv.TimerInfo,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.CreateSeriesTimerAsync(MediaBrowser.Controller.LiveTv.SeriesTimerInfo,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.UpdateTimerAsync(MediaBrowser.Controller.LiveTv.TimerInfo,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.LiveTv.VavooLiveTvService.UpdateSeriesTimerAsync(MediaBrowser.Controller.LiveTv.SeriesTimerInfo,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.Plugin">
+            <summary>
+            The JellyVoo plugin main class.
+            </summary>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.Plugin.#ctor(MediaBrowser.Common.Configuration.IApplicationPaths,MediaBrowser.Model.Serialization.IXmlSerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Jellyfin.Plugin.JellyVoo.Plugin"/> class.
+            </summary>
+            <param name="applicationPaths">Instance of the <see cref="T:MediaBrowser.Common.Configuration.IApplicationPaths"/> interface.</param>
+            <param name="xmlSerializer">Instance of the <see cref="T:MediaBrowser.Model.Serialization.IXmlSerializer"/> interface.</param>
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Plugin.Name">
+            <inheritdoc />
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Plugin.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:Jellyfin.Plugin.JellyVoo.Plugin.Instance">
+            <summary>
+            Gets the current plugin instance.
+            </summary>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.Plugin.GetPages">
+            <inheritdoc />
+        </member>
+        <member name="T:Jellyfin.Plugin.JellyVoo.PluginServiceRegistrator">
+            <summary>
+            Registers plugin services with the Jellyfin dependency injection container.
+            </summary>
+        </member>
+        <member name="M:Jellyfin.Plugin.JellyVoo.PluginServiceRegistrator.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,MediaBrowser.Controller.IServerApplicationHost)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
